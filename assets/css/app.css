@@ -1,19 +1,5 @@
-/* Additional spacing + overrides */
+/* App-specific spacing tweaks */
 
-section {
-    margin-bottom: 40px;
-}
-
-.form-card form {
-    margin-top: 10px;
-}
-
-.stat-box h4 {
-    margin: 8px 0 4px 0;
-}
-
-.stat-box p {
-    margin: 0;
-    font-size: 14px;
-    color: #9ca3af;
+form {
+  margin-top: 10px;
 }
