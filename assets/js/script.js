@@ -1,58 +1,99 @@
-// script.js - Functional logic for Micro Offer Engine
+/* ======================================================
+   Micro Offer Engine – Working Base Logic
+====================================================== */
 
-$(document).ready(function() {
-    const $form = $('#offerForm');
-    const $generateBtn = $('#generateBtn');
-    const $resultsSection = $('#resultsSection');
-    const $generateNewBtn = $('#generateNewBtn');
-    const $formPanel = $form.closest('.nextwave-glass');
+document.addEventListener("DOMContentLoaded", () => {
 
-    // Function to handle form submission
-    $form.on('submit', function(e) {
-        e.preventDefault();
-        
-        // Basic Bootstrap form validation check
-        if (!this.checkValidity()) {
-            e.stopPropagation();
-            $form.addClass('was-validated');
-            return;
-        }
+  /* DATA */
+  const expertiseOptions = [
+    "Digital Marketing",
+    "Affiliate Marketing",
+    "SEO",
+    "Email Marketing",
+    "Social Media",
+    "AI Tools",
+    "Automation",
+    "SaaS",
+    "Online Business",
+    "Custom"
+  ];
 
-        // 1. Show Loading State
-        $generateBtn.html('<i class="fa-solid fa-spinner fa-spin me-2"></i> Generating Offer...');
-        $generateBtn.prop('disabled', true);
-        $formPanel.css('opacity', '0.5');
+  const customerOptions = [
+    "Complete Beginners",
+    "Side Hustlers",
+    "Affiliate Marketers",
+    "Entrepreneurs",
+    "Small Business Owners",
+    "Content Creators",
+    "SaaS Founders"
+  ];
 
-        // 2. Simulate AI generation process (e.g., an API call)
-        setTimeout(function() {
-            // 3. Hide form and show results
-            $formPanel.hide();
-            $resultsSection.show();
-            
-            // 4. Reset button state
-            $generateBtn.html('<i class="fa-solid fa-wand-magic-sparkles me-2"></i> Generate Offer Package');
-            $generateBtn.prop('disabled', false);
-            $formPanel.css('opacity', '1');
+  const formatOptions = [
+    "Checklist",
+    "Step-by-Step Guide",
+    "Template Pack",
+    "Prompt Pack",
+    "Swipe File",
+    "Mini Playbook",
+    "Toolkit"
+  ];
 
-            // Optional: You would insert the actual generated content here
-            // For now, we use the placeholder content already in index.html
-            
-        }, 3000); // 3 second delay to simulate processing
+  /* ELEMENTS */
+  const form = document.getElementById("microOfferForm");
+  const expertise = document.getElementById("expertise");
+  const customer = document.getElementById("customer");
+  const problem = document.getElementById("problem");
+  const format = document.getElementById("format");
+
+  /* HELPERS */
+  function populate(select, items, placeholder) {
+    select.innerHTML = `<option value="">${placeholder}</option>`;
+    items.forEach(item => {
+      const opt = document.createElement("option");
+      opt.value = item;
+      opt.textContent = item;
+      select.appendChild(opt);
     });
+  }
 
-    // Function to handle "Generate New Offer" button
-    $generateNewBtn.on('click', function() {
-        // 1. Hide results and show form
-        $resultsSection.hide();
-        $formPanel.show();
-        
-        // 2. Reset form
-        $form[0].reset();
-        $form.removeClass('was-validated');
-    });
+  /* INIT */
+  populate(expertise, expertiseOptions, "Select expertise...");
+  populate(customer, customerOptions, "Select customer...");
+  populate(format, formatOptions, "Select format...");
 
-    // Simple handler for the Download All Files button
-    $('#downloadAllBtn').on('click', function() {
-        alert('Download functionality would be handled here (e.g., zipping and serving files).');
-    });
+  /* SUBMIT */
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    if (
+      !expertise.value ||
+      !customer.value ||
+      !problem.value.trim() ||
+      !format.value
+    ) {
+      alert("Please complete all fields before generating your offer.");
+      return;
+    }
+
+    const payload = {
+      expertise: expertise.value,
+      customer: customer.value,
+      problem: problem.value.trim(),
+      format: format.value
+    };
+
+    console.log("✅ Micro Offer Captured:", payload);
+
+    alert(
+      "Micro Offer captured successfully.\n\n" +
+      "Next step: SignalForge scoring → AI build."
+    );
+
+    // READY FOR:
+    // - SignalForge autofill
+    // - Supabase save
+    // - AI generation
+  });
+
 });
+      
