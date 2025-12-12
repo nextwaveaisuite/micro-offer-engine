@@ -1,34 +1,3 @@
 {
-  "name": "micro-offer-engine",
-  "version": 2,
-  "public": false,
-  "buildCommand": "echo 'Build complete'",
-  "outputDirectory": ".",
-  "env": {
-    "VITE_SUPABASE_URL": "@supabase_url",
-    "VITE_SUPABASE_ANON_KEY": "@supabase_anon_key"
-  },
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=3600, s-maxage=3600"
-        }
-      ]
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "https://your-supabase-url.supabase.co/rest/v1/$1"
-    }
-  ]
+  "cleanUrls": true
 }
