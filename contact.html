@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Micro Offer Engine</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- NEXTWAVE THEME -->
+    <link href="assets/css/nextwave.css" rel="stylesheet" />
+
+    <style>
+        .contact-nav {
+            background: rgba(10, 14, 22, 0.75);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 140, 255, 0.15);
+            padding: 1rem 0;
+        }
+
+        .contact-nav-brand {
+            color: #5ab4ff;
+            text-shadow: 0 0 12px rgba(80, 170, 255, 0.6);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .contact-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 1rem;
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .contact-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, #5ab4ff, #7cc7ff);
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .contact-header p {
+            color: #8fa3c2;
+            font-size: 1.1rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-info-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(120, 170, 255, 0.15);
+            border-radius: 15px;
+            padding: 2rem;
+            backdrop-filter: blur(18px);
+        }
+
+        .contact-info-card i {
+            font-size: 2.5rem;
+            color: #5ab4ff;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info-card h3 {
+            color: #b9d4ff;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .contact-info-card p {
+            color: #8fa3c2;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .contact-info-card a {
+            color: #5ab4ff;
+            text-decoration: none;
+        }
+
+        .contact-info-card a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-form-section {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(120, 170, 255, 0.15);
+            border-radius: 15px;
+            padding: 2.5rem;
+            backdrop-filter: blur(18px);
+        }
+
+        .contact-form-section h2 {
+            color: #b9d4ff;
+            font-weight: 600;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group-contact {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group-contact label {
+            color: #b9d4ff;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group-contact input,
+        .form-group-contact textarea {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(100, 160, 255, 0.2);
+            color: #e8eef7;
+            padding: 0.75rem;
+            border-radius: 8px;
+            font-family: inherit;
+        }
+
+        .form-group-contact input:focus,
+        .form-group-contact textarea:focus {
+            box-shadow: 0 0 0 2px rgba(80, 150, 255, 0.4);
+            border-color: #5ab4ff;
+            outline: none;
+        }
+
+        .form-group-contact textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .contact-button {
+            background: linear-gradient(90deg, #007bff, #0098ff);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+            width: 100%;
+        }
+
+        .contact-button:hover {
+            box-shadow: 0 0 25px rgba(0, 152, 255, 0.65);
+            transform: translateY(-2px);
+        }
+
+        .faq-section {
+            margin-top: 3rem;
+        }
+
+        .faq-section h2 {
+            color: #b9d4ff;
+            font-weight: 600;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(120, 170, 255, 0.15);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .faq-item:hover {
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        .faq-item h4 {
+            color: #b9d4ff;
+            font-weight: 600;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-item p {
+            color: #8fa3c2;
+            margin: 1rem 0 0 0;
+            display: none;
+            line-height: 1.6;
+        }
+
+        .faq-item.active p {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body class="nextwave-body">
+
+    <!-- NAVIGATION -->
+    <nav class="contact-nav">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="contact-nav-brand">
+                <i class="fa-solid fa-rocket me-2"></i>
+                Micro Offer Engine
+            </div>
+            <div>
+                <a href="index.html" style="color: #8fa3c2; text-decoration: none; margin-left: 2rem;">Back to App</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENT -->
+    <div class="contact-container">
+        <div class="contact-header">
+            <h1>Get in Touch</h1>
+            <p>We're here to help. Reach out to us with any questions or feedback.</p>
+        </div>
+
+        <!-- Contact Info Cards -->
+        <div class="contact-grid">
+            <div class="contact-info-card">
+                <i class="fa-solid fa-envelope"></i>
+                <h3>Email</h3>
+                <p>
+                    <a href="mailto:support@nextwave.ai">support@nextwave.ai</a><br>
+                    We typically respond within 24 hours.
+                </p>
+            </div>
+
+            <div class="contact-info-card">
+                <i class="fa-solid fa-phone"></i>
+                <h3>Phone</h3>
+                <p>
+                    <a href="tel:+1234567890">+1 (234) 567-890</a><br>
+                    Monday - Friday, 9 AM - 5 PM EST
+                </p>
+            </div>
+
+            <div class="contact-info-card">
+                <i class="fa-solid fa-map-pin"></i>
+                <h3>Office</h3>
+                <p>
+                    NextWave AI Suite<br>
+                    Your City, Your Country<br>
+                    12345
+                </p>
+            </div>
+
+            <div class="contact-info-card">
+                <i class="fa-solid fa-comments"></i>
+                <h3>Live Chat</h3>
+                <p>
+                    Chat with our support team in real-time.<br>
+                    Available 24/7 for urgent issues.
+                </p>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-section">
+            <h2>Send us a Message</h2>
+            <form id="contactForm">
+                <div class="form-group-contact">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required />
+                </div>
+
+                <div class="form-group-contact">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required />
+                </div>
+
+                <div class="form-group-contact">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required />
+                </div>
+
+                <div class="form-group-contact">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+
+                <button type="submit" class="contact-button">
+                    <i class="fa-solid fa-paper-plane me-2"></i>
+                    Send Message
+                </button>
+            </form>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <h4>
+                    <span>How do I get started with Micro Offer Engine?</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </h4>
+                <p>
+                    Simply sign up for an account, complete your profile, and you're ready to start creating micro offers. Our onboarding guide will walk you through the process step by step.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h4>
+                    <span>What payment methods do you accept?</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </h4>
+                <p>
+                    We accept all major credit cards, PayPal, and bank transfers. All payments are processed securely through our Stripe integration.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h4>
+                    <span>Can I cancel my subscription anytime?</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </h4>
+                <p>
+                    Yes, you can cancel your subscription at any time from your account settings. Your access will continue until the end of your billing period.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h4>
+                    <span>Do you offer refunds?</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </h4>
+                <p>
+                    We offer a 30-day money-back guarantee if you're not satisfied with our service. No questions asked. Contact our support team to initiate a refund.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h4>
+                    <span>How secure is my data?</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </h4>
+                <p>
+                    We use enterprise-grade security with Supabase PostgreSQL, SSL encryption, and regular security audits. Your data is backed up daily and protected against unauthorized access.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        // Contact form submission
+        $('#contactForm').on('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+
+        // FAQ accordion
+        $('.faq-item h4').on('click', function() {
+            $(this).closest('.faq-item').toggleClass('active');
+        });
+    </script>
+
+</body>
+</html>
