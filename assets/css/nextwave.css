@@ -1,0 +1,99 @@
+/* ================================
+   NEXTWAVE AI SUITE GLOBAL THEME
+   Dark Futuristic + Neon Blue Glow
+==================================*/
+
+body.nextwave-body {
+    background: radial-gradient(circle at top, #0d1117, #05070a 60%);
+    font-family: "Inter", sans-serif;
+    color: #e4e8f0;
+}
+
+/* NAVIGATION */
+.nextwave-nav {
+    background: rgba(10, 14, 22, 0.75);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 140, 255, 0.15);
+}
+
+.nav-brand-glow {
+    color: #5ab4ff;
+    text-shadow: 0 0 12px rgba(80, 170, 255, 0.6);
+}
+
+.nav-logout {
+    color: #8fa3c2;
+}
+.nav-logout:hover {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 140, 255, 0.7);
+}
+
+/* GLASS PANELS */
+.nextwave-glass {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(120, 170, 255, 0.15);
+    border-radius: 20px;
+    backdrop-filter: blur(18px);
+}
+
+/* HERO */
+.text-gradient {
+    background: linear-gradient(90deg, #5ab4ff, #7cc7ff);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.feature-box {
+    text-align: center;
+    color: #b9d4ff;
+}
+.feature-box i {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    color: #5ab4ff;
+}
+
+/* FORM INPUTS */
+.nextwave-input {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(100, 160, 255, 0.2);
+    color: #e8eef7;
+}
+.nextwave-input:focus {
+    box-shadow: 0 0 0 2px rgba(80, 150, 255, 0.4);
+    border-color: #5ab4ff;
+}
+
+/* BUTTONS */
+.nextwave-button {
+    background: linear-gradient(90deg, #007bff, #0098ff);
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: 0.25s;
+}
+.nextwave-button:hover {
+    box-shadow: 0 0 25px rgba(0, 152, 255, 0.65);
+    transform: translateY(-2px);
+}
+
+.nextwave-button-outline {
+    background: rgba(0, 132, 255, 0.15);
+    border: 1px solid rgba(80, 170, 255, 0.3);
+    color: #8bc8ff;
+    padding: 14px 30px;
+    border-radius: 10px;
+}
+.nextwave-button-outline:hover {
+    background: rgba(0, 132, 255, 0.25);
+    box-shadow: 0 0 15px rgba(80, 170, 255, 0.5);
+}
+
+/* FOOTER */
+.nextwave-footer {
+    opacity: 0.6;
+    font-size: 0.9rem;
+}

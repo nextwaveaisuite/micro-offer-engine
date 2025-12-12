@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Micro Offer Engine</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap (kept for layout & JS plugins) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- NEXTWAVE THEME -->
+    <link href="assets/css/nextwave.css" rel="stylesheet" />
+</head>
+
+<body class="nextwave-body">
+
+    <!-- NAVIGATION -->
+    <nav class="nextwave-nav shadow-lg">
+        <div class="container d-flex justify-content-between align-items-center py-3">
+            <div class="d-flex align-items-center nav-brand-glow">
+                <i class="fa-solid fa-rocket me-2"></i>
+                <span class="fw-bold fs-4">Micro Offer Engine</span>
+            </div>
+
+            <div class="text-end nav-logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span id="logout" style="cursor:pointer;">Logout</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGE WRAPPER -->
+    <div class="container mt-5">
+
+        <!-- HERO PANEL -->
+        <div class="nextwave-glass hero-panel text-center p-5 mb-5">
+            <h1 class="fw-bold display-5 text-gradient mb-3">
+                <i class="fa-solid fa-bolt me-2"></i>
+                Micro Offer Engine
+            </h1>
+
+            <p class="lead text-muted mb-4">
+                Instantly generate profitable micro offers, complete with sales pages, deliverables, and marketing content — fully AI-powered.
+            </p>
+
+            <div class="row mt-4">
+                <div class="col-md-3 feature-box">
+                    <i class="fa-solid fa-clock"></i>
+                    <h5>5–15 Minutes</h5>
+                    <p>Complete Offer Creation</p>
+                </div>
+                <div class="col-md-3 feature-box">
+                    <i class="fa-solid fa-file-lines"></i>
+                    <h5>Multiple Assets</h5>
+                    <p>Ready-to-Sell Files</p>
+                </div>
+                <div class="col-md-3 feature-box">
+                    <i class="fa-solid fa-tag"></i>
+                    <h5>$3–$20 Range</h5>
+                    <p>Optimal Pricing</p>
+                </div>
+                <div class="col-md-3 feature-box">
+                    <i class="fa-solid fa-brain"></i>
+                    <h5>AI Optimized</h5>
+                    <p>Conversion-Focused</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FORM PANEL -->
+        <div class="nextwave-glass p-4 rounded-4 shadow-lg">
+            <h3 class="text-center text-gradient mb-4 fw-bold">
+                <i class="fa-solid fa-wand-magic-sparkles me-2"></i>
+                Create Your Micro Offer
+            </h3>
+
+            <form id="offerForm" class="needs-validation" novalidate>
+
+                <div class="mb-4">
+                    <label class="form-label fw-semibold">Your Expertise</label>
+                    <select class="form-select nextwave-input" id="expertise" required>
+                        <option value="">Select expertise...</option>
+                        <option>Digital Marketing</option>
+                        <option>Social Media</option>
+                        <option>Copywriting</option>
+                        <option>SEO</option>
+                        <option>Business Strategy</option>
+                        <option>Custom</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label fw-semibold">Target Customer Type</label>
+                    <select class="form-select nextwave-input" id="targetCustomer" required>
+                        <option value="">Select customer...</option>
+                        <option>Beginners</option>
+                        <option>Freelancers</option>
+                        <option>Small Businesses</option>
+                        <option>Content Creators</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label fw-semibold">Main Problem to Solve</label>
+                    <textarea class="form-control nextwave-input" id="mainProblem" rows="3" placeholder="Describe the problem..." required></textarea>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label fw-semibold">Preferred Offer Format</label>
+                    <select class="form-select nextwave-input" id="offerFormat" required>
+                        <option value="">Select format...</option>
+                        <option>Checklist</option>
+                        <option>Template</option>
+                        <option>Mini Guide</option>
+                        <option>Toolkit</option>
+                    </select>
+                </div>
+
+                <div class="text-center">
+                    <button class="nextwave-button" type="submit" id="generateBtn">
+                        <i class="fa-solid fa-wand-magic-sparkles me-2"></i>
+                        Generate Offer Package
+                    </button>
+                </div>
+
+            </form>
+        </div>
+
+        <!-- RESULTS -->
+        <div id="resultsSection" class="mt-5" style="display:none;">
+            <div class="nextwave-glass p-4 rounded-4 shadow-lg">
+                <h3 class="fw-bold text-success">
+                    <i class="fa-solid fa-circle-check me-2"></i>
+                    Your Offer Package is Ready!
+                </h3>
+
+                <div id="packageContents" class="mt-4">
+                    <!-- Placeholder for generated content -->
+                    <p><strong>Offer Title:</strong> The Ultimate SEO Checklist for Beginners</p>
+                    <p><strong>Format:</strong> Checklist</p>
+                    <p><strong>Problem Solved:</strong> Overcoming confusion about initial SEO steps.</p>
+                    <p><strong>Price Suggestion:</strong> $7.00</p>
+                </div>
+
+                <div class="mt-4 d-flex gap-3">
+                    <button class="nextwave-button w-100" id="downloadAllBtn">
+                        <i class="fa-solid fa-download me-2"></i>
+                        Download All Files
+                    </button>
+
+                    <button class="nextwave-button-outline w-100" id="generateNewBtn">
+                        <i class="fa-solid fa-plus me-2"></i>
+                        Generate New Offer
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="nextwave-footer mt-5 py-4 text-center">
+        <p class="mb-0 text-muted">Powered by NextWave AI Suite • Micro Offer Engine v1.0</p>
+    </footer>
+
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <script>
+        // Simple logout handler (can be replaced by Supabase Auth logic)
+        $('#logout').click(() => {
+            alert('Logout functionality would be handled here (e.g., redirect to logout.php or call Supabase sign-out).');
+            // window.location.href = "logout.php";
+        });
+    </script>
+
+</body>
+</html>
