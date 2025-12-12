@@ -1,7 +1,7 @@
 /* ======================================================
    NEXTWAVE • SIGNALFORGE COMPANION SKIN
    DARK UI • WHITE TEXT • GREEN EMPHASIS
-   ZERO BLUE TEXT — LOCKED
+   FINAL LOCKED VERSION
 ====================================================== */
 
 :root {
@@ -41,14 +41,15 @@ body {
   border-bottom: 1px solid var(--border-soft);
 }
 
+/* LOGO / TITLE — GREEN */
 .nav-title {
   font-size: 18px;
   font-weight: 700;
-  color: var(--text-main); /* WHITE */
+  color: var(--green); /* GREEN */
 }
 
 .nav-title i {
-  color: var(--green); /* GREEN ICON */
+  color: var(--green);
   margin-right: 6px;
 }
 
@@ -73,22 +74,18 @@ body {
   padding: 60px 20px 40px;
 }
 
+/* MAIN HEADER — GREEN */
 .hero h1 {
   font-size: 38px;
   font-weight: 700;
-  color: var(--text-main); /* WHITE */
-}
-
-.hero h1 span,
-.hero h1 i {
-  color: var(--green); /* GREEN BLEND */
+  color: var(--green); /* GREEN */
 }
 
 .hero p {
   max-width: 760px;
   margin: 12px auto;
   font-size: 16px;
-  color: var(--text-main); /* BODY TEXT = WHITE */
+  color: var(--text-main); /* WHITE BODY TEXT */
 }
 
 /* =========================
@@ -122,13 +119,13 @@ body {
   margin: 6px 0 2px;
   font-size: 15px;
   font-weight: 600;
-  color: var(--text-main); /* WHITE */
+  color: var(--text-main);
 }
 
 .stat-box p {
   margin: 0;
   font-size: 13px;
-  color: var(--text-muted); /* MUTED */
+  color: var(--text-muted);
 }
 
 /* =========================
@@ -152,11 +149,11 @@ body {
 .form-card h2 {
   text-align: center;
   margin-bottom: 18px;
-  color: var(--text-main); /* WHITE */
+  color: var(--text-main);
 }
 
 .form-card h2 i {
-  color: var(--green); /* GREEN ICON */
+  color: var(--green);
 }
 
 /* =========================
@@ -196,7 +193,7 @@ input:focus {
 .helper-text {
   font-size: 12.5px;
   margin-top: 4px;
-  color: var(--text-muted); /* MUTED GREY ONLY */
+  color: var(--text-muted);
 }
 
 /* =========================
