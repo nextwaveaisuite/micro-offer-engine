@@ -1,100 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Micro Offer Engine</title>
+  <meta charset="UTF-8">
+  <title>Micro Offer Engine</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-
-    <!-- SignalForge Theme -->
-    <link rel="stylesheet" href="assets/css/nextwave.css">
-    <link rel="stylesheet" href="assets/css/app.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/nextwave.css">
+  <link rel="stylesheet" href="assets/css/app.css">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<!-- NAV -->
 <nav class="nav-bar">
-    <div class="nav-left">
-        <span class="nav-title"><i class="fas fa-bolt"></i> Micro Offer Engine</span>
-    </div>
-
-    <div class="nav-right">
-        <a href="https://your-checkout-link-here" class="btn-upgrade">
-            <i class="fas fa-rocket"></i> Upgrade
-        </a>
-        <a href="login.html" class="nav-logout"><i class="fas fa-right-from-bracket"></i> Logout</a>
-    </div>
+  <div class="nav-left">
+    <span class="nav-title"><i class="fas fa-bolt"></i> Micro Offer Engine</span>
+  </div>
+  <div class="nav-right">
+    <a href="#" class="btn-upgrade"><i class="fas fa-rocket"></i> Upgrade</a>
+  </div>
 </nav>
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 <section class="hero">
-    <h1 class="hero-title"><i class="fas fa-wand-magic-sparkles"></i> Micro Offer Engine</h1>
-    <p class="hero-subtitle">Instantly generate profitable micro offers, complete with sales pages, deliverables, and marketing content — fully AI-powered.</p>
+  <h1>Micro Offer Engine</h1>
+  <p>
+    Instantly generate profitable micro offers — including deliverables,
+    sales pages, and marketing content — powered by SignalForge intelligence.
+  </p>
 
-    <div class="stats-container">
-        <div class="stat-box">
-            <i class="fas fa-clock"></i>
-            <h4>5–15 Minutes</h4>
-            <p>Complete Offer Creation</p>
-        </div>
-        <div class="stat-box">
-            <i class="fas fa-layer-group"></i>
-            <h4>Multiple Assets</h4>
-            <p>Ready-to-Sell Files</p>
-        </div>
-        <div class="stat-box">
-            <i class="fas fa-dollar-sign"></i>
-            <h4>$3–$20 Range</h4>
-            <p>Optimal Pricing</p>
-        </div>
-        <div class="stat-box">
-            <i class="fas fa-brain"></i>
-            <h4>AI Optimized</h4>
-            <p>Conversion-Focused</p>
-        </div>
+  <div class="stats-container">
+    <div class="stat-box">
+      <i class="fas fa-clock"></i>
+      <h4>5–15 Minutes</h4>
+      <p>Complete Offer Creation</p>
     </div>
+    <div class="stat-box">
+      <i class="fas fa-layer-group"></i>
+      <h4>Multiple Assets</h4>
+      <p>Ready-to-Sell Files</p>
+    </div>
+    <div class="stat-box">
+      <i class="fas fa-dollar-sign"></i>
+      <h4>$3–$20 Range</h4>
+      <p>Optimal Pricing</p>
+    </div>
+    <div class="stat-box">
+      <i class="fas fa-brain"></i>
+      <h4>AI Optimized</h4>
+      <p>Conversion-Focused</p>
+    </div>
+  </div>
 </section>
 
-<!-- FORM SECTION -->
+<!-- FORM -->
 <section class="form-section">
-    <div class="form-card">
-        <h2><i class="fas fa-magic"></i> Create Your Micro Offer</h2>
+  <div class="form-card">
+    <h2><i class="fas fa-magic"></i> Create Your Micro Offer</h2>
 
-        <form>
-            <label>Your Expertise</label>
-            <select>
-                <option>Select expertise...</option>
-            </select>
+    <form>
 
-            <label>Target Customer Type</label>
-            <select>
-                <option>Select customer...</option>
-            </select>
+      <label>Your Expertise</label>
+      <select>
+        <option>Select expertise...</option>
+      </select>
+      <div class="helper-text">
+        Choose the skill or knowledge area this offer is based on.
+      </div>
 
-            <label>Main Problem to Solve</label>
-            <textarea placeholder="Describe the problem..."></textarea>
+      <label>Target Customer Type</label>
+      <select>
+        <option>Select customer...</option>
+      </select>
+      <div class="helper-text">
+        Who is this offer specifically designed to help?
+      </div>
 
-            <label>Preferred Offer Format</label>
-            <select>
-                <option>Select format...</option>
-            </select>
+      <label>Main Problem to Solve</label>
+      <textarea placeholder="Describe the problem..."></textarea>
+      <div class="helper-text">
+        Clearly describe the main pain point the customer wants solved.
+      </div>
 
-            <button class="btn-generate"><i class="fas fa-magic"></i> Generate Offer Package</button>
-        </form>
-    </div>
+      <label>Preferred Offer Format</label>
+      <select>
+        <option>Select format...</option>
+      </select>
+      <div class="helper-text">
+        Select the format that delivers the fastest, clearest result.
+      </div>
+
+      <button class="btn-generate">
+        <i class="fas fa-magic"></i> Generate Offer Package
+      </button>
+
+    </form>
+  </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
-    Powered by NextWave AI Suite • Micro Offer Engine v1.0
+  Powered by NextWave AI Suite • Micro Offer Engine
 </footer>
 
-<script src="assets/js/app.js"></script>
 </body>
 </html>
